@@ -348,8 +348,14 @@ class _MyHomePageState extends State<MyHomePage> {
             break;
           case 2:
             result = dFirstNumber * dSecondNumber;
+            break;
           case 3:
-            result = dFirstNumber / dSecondNumber;
+            if (dSecondNumber == 0) {
+              result = 0;
+            } else {
+              result = dFirstNumber / dSecondNumber;
+            }
+            break;
         }
         firstNumber = removeDotZero(result.toString());
         setState(() {
@@ -408,8 +414,14 @@ class _MyHomePageState extends State<MyHomePage> {
               break;
             case 2:
               result = dFirstNumber * dSecondNumber;
+              break;
             case 3:
-              result = dFirstNumber / dSecondNumber;
+              if (dSecondNumber == 0) {
+                result = 0;
+              } else {
+                result = dFirstNumber / dSecondNumber;
+              }
+              break;
           }
           firstNumber = removeDotZero(result.toString());
           setState(() {
